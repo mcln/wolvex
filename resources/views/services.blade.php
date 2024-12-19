@@ -16,7 +16,7 @@
             <source src="{{ asset('storage/assets/videos/' . $random_video) }}" type="video/webm">
         </video>
         <div
-            class="relative z-10 flex flex-col items-end justify-center h-[200px] text-right text-white bg-black bg-opacity-30 pr-10">
+            class="relative z-10 flex flex-col items-end justify-center h-[200px] text-right text-white bg-azul-fondo bg-opacity-30 pr-10">
             <h1 class="text-4xl font-bold underline"><br>Servicios</h1>
         </div>
     </header>
@@ -40,12 +40,12 @@
     </div>
 
     {{-- DESARROLLO WEB --}}
-    <section class="bg-verde-bonito pb-12">
-        <h2 class="text-4xl font-bold text-black ml-12">Desarrollo Web</h2>
+    <section id="development-web" class="bg-verde-bonito pb-12">
+        <h2 class="text-4xl font-bold text-azul-fondo ml-12">Desarrollo Web</h2>
         <div id="importante-container"
             class="p-4 max-w-2xl mt-12 mx-auto bg-green-300 flex items-center space-x-2 transform transition-transform duration-300 scale-100 text-center">
             <!-- Icono de advertencia -->
-            <i class="fa-sharp fa-solid fa-circle-exclamation text-2xl text-black"></i>
+            <i class="fa-sharp fa-solid fa-circle-exclamation text-2xl text-azul-fondo"></i>
             <!-- Contenido importante -->
             <p class="font-semibold">
                 <strong>Importante:</strong> El costo del <strong>hosting</strong> y el <strong>dominio</strong> no están
@@ -54,7 +54,7 @@
                     <span class="hover:text-verde-piola">Servicios Adicionales</span>
                     <!-- Tooltip -->
                     <span
-                        class="absolute bottom-full left-0 mb-2 hidden w-max bg-white text-gray-700 text-sm p-2 rounded-md shadow-lg border border-gray-200 group-hover:block text-left">
+                        class="absolute bottom-full left-0 mb-2 hidden w-max bg-white text-gray-700 text-sm p-2 shadow-lg border border-gray-200 group-hover:block text-left">
                         Hosting (Valor aprox por año $15.000 CLP + IVA)<br>
                         Dominio .cl o .com (Valor aprox por año $20.000 CLP + IVA)
                     </span>
@@ -63,40 +63,42 @@
             </p>
         </div>
 
-
+        <!-- Página Web Simple -->
         <div class="mt-12 px-4 sm:px-6 lg:px-8">
             <!-- Título y descripción -->
-            <h2 class="text-2xl font-bold text-black mb-4 flex items-center">
+            <h2 class="text-2xl font-bold text-azul-fondo mb-4 flex items-center">
                 <i class="fas fa-file-alt mr-2"></i> Página Web Simple
             </h2>
-            <p class="text-lg text-black mb-6">
+            <p class="text-lg text-azul-fondo mb-6">
                 Una Landing Page o One Page está diseñada para negocios que buscan atraer atención inmediata, ofrecer
                 información concisa sobre sus productos o servicios, y facilitar la conversión de visitantes en clientes.
-                Ideal para emprendedores, empresas que lanzan productos nuevos, o negocios que necesitan una presencia online
+                Ideal para emprendedores, empresas que lanzan productos nuevos, o negocios que necesitan una presencia
+                online
                 simple pero impactante.
             </p>
-        
+
             <!-- Botón para mostrar/ocultar opciones -->
             <div class="text-center lg:text-left">
                 <button
-                    class="bg-black text-white font-semibold py-2 px-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-limon hover:bg-verde-limon hover:text-black"
+                    class="bg-azul-fondo text-white font-semibold py-2 px-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-limon hover:bg-verde-limon hover:text-azul-fondo"
                     onclick="togglePlans('landing', this)">
                     Ver valores
                 </button>
             </div>
-        
+
             <!-- Planes -->
             <div id="landing-plans" class="hidden mt-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Plan Lite -->
-                    <div class="p-6 shadow-lg bg-lime-200 rounded-lg">
+                    <div class="p-6 shadow-lg bg-lime-200">
                         <div class="flex items-center space-x-2 mb-4">
-                            <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl rounded-full">
+                            <div
+                                class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
                                 1
                             </div>
                             <h3 class="text-xl font-bold">Lite</h3>
                         </div>
-                        <p class="text-lg text-black font-semibold mb-4">Desde: $100.000 CLP (+ IVA)</p>
+                        <p class="text-lg text-azul-fondo font-semibold mb-4">Desde: $100.000 CLP (+ IVA)</p>
                         <ul class="space-y-2 list-disc pl-5">
                             <li>Diseño básico</li>
                             <li>Hasta 3 secciones (inicio, servicios, contacto, etc.)</li>
@@ -104,40 +106,45 @@
                             <li>Optimización básica para móviles</li>
                         </ul>
                     </div>
-        
+
                     <!-- Plan Smart -->
-                    <div class="p-6 shadow-lg bg-lime-200 rounded-lg">
+                    <div class="p-6 shadow-lg bg-lime-200">
                         <div class="flex items-center space-x-2 mb-4">
-                            <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl rounded-full">
+                            <div
+                                class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
                                 2
                             </div>
                             <h3 class="text-xl font-bold">Smart</h3>
                         </div>
-                        <p class="text-lg text-black font-semibold mb-4">Desde: $200.000 CLP (+ IVA)</p>
+                        <p class="text-lg text-azul-fondo font-semibold mb-4">Desde: $200.000 CLP (+ IVA)</p>
                         <ul class="space-y-2 list-disc pl-5">
                             <li>Diseño personalizado</li>
-                            <li>Hasta 6 secciones (inicio, servicios, sobre nosotros, contacto, productos, testimonios, etc.)</li>
+                            <li>Hasta 6 secciones (inicio, servicios, sobre nosotros, contacto, productos, testimonios,
+                                etc.)</li>
                             <li>Formulario avanzado con validaciones</li>
                             <li>Integración básica de SEO (meta descripciones, títulos, palabras clave, etc.)</li>
                             <li>Optimización para dispositivos móviles</li>
                             <li><strong>Extra:</strong> Entrega más rápida y soporte post-lanzamiento básico</li>
                         </ul>
                     </div>
-        
+
                     <!-- Plan Pro -->
-                    <div class="p-6 shadow-lg bg-lime-200 rounded-lg">
+                    <div class="p-6 shadow-lg bg-lime-200">
                         <div class="flex items-center space-x-2 mb-4">
-                            <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl rounded-full">
+                            <div
+                                class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
                                 3
                             </div>
                             <h3 class="text-xl font-bold">Pro</h3>
                         </div>
-                        <p class="text-lg text-black font-semibold mb-4">Desde: $400.000 CLP (+ IVA)</p>
+                        <p class="text-lg text-azul-fondo font-semibold mb-4">Desde: $400.000 CLP (+ IVA)</p>
                         <ul class="space-y-2 list-disc pl-5">
                             <li>Diseño completamente personalizado</li>
                             <li>7+ secciones con funcionalidades avanzadas (testimonios, redes sociales, etc.)</li>
-                            <li>Integración avanzada con herramientas de marketing (Google Analytics, Mailchimp, Mailerlite, etc.)</li>
-                            <li><strong>SEO avanzado:</strong> Optimización de contenido, estructura del sitio, velocidad, etc.</li>
+                            <li>Integración avanzada con herramientas de marketing (Google Analytics, Mailchimp, Mailerlite,
+                                etc.)</li>
+                            <li><strong>SEO avanzado:</strong> Optimización de contenido, estructura del sitio, velocidad,
+                                etc.</li>
                             <li>Soporte post-lanzamiento por un mes (modificaciones y ajustes)</li>
                             <li>Entrega rápida y detallada</li>
                         </ul>
@@ -145,40 +152,43 @@
                 </div>
             </div>
         </div>
-        
 
+        <!-- Página Pyme, Emprendimiento o Corporativa -->
         <div class="mt-12 px-4 sm:px-6 lg:px-8">
             <!-- Título y descripción -->
-            <h2 class="text-2xl font-bold text-black mb-4 flex items-center">
+            <h2 class="text-2xl font-bold text-azul-fondo mb-4 flex items-center">
                 <i class="fas fa-building mr-2"></i> Página Pyme, Emprendimiento o Corporativa
             </h2>
-            <p class="text-lg text-black mb-6">
-                La página WordPress es ideal para aquellos que buscan una plataforma flexible, fácil de gestionar, y con gran
-                capacidad de personalización. Ya sea para un blog, un Emprendimiento o un sitio corporativo, WordPress es una
+            <p class="text-lg text-azul-fondo mb-6">
+                La página WordPress es ideal para aquellos que buscan una plataforma flexible, fácil de gestionar, y con
+                gran
+                capacidad de personalización. Ya sea para un blog, un Emprendimiento o un sitio corporativo, WordPress es
+                una
                 opción robusta para cualquier tipo de negocio.
             </p>
-        
+
             <!-- Botón para mostrar/ocultar opciones -->
             <div class="text-center lg:text-left">
                 <button
-                    class="bg-black text-white font-semibold py-2 px-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-limon hover:bg-verde-limon hover:text-black"
+                    class="bg-azul-fondo text-white font-semibold py-2 px-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-limon hover:bg-verde-limon hover:text-azul-fondo"
                     onclick="togglePlans('wordpress', this)">
                     Ver valores
                 </button>
             </div>
-        
+
             <!-- Planes -->
             <div id="wordpress-plans" class="hidden mt-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Plan Lite -->
-                    <div class="p-6 shadow-lg bg-lime-200 rounded-lg">
+                    <div class="p-6 shadow-lg bg-lime-200">
                         <div class="flex items-center space-x-2 mb-4">
-                            <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl rounded-full">
+                            <div
+                                class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
                                 1
                             </div>
                             <h3 class="text-xl font-bold">Lite</h3>
                         </div>
-                        <p class="text-lg text-black font-semibold mb-4">Desde: $200.000 CLP (+ IVA)</p>
+                        <p class="text-lg text-azul-fondo font-semibold mb-4">Desde: $200.000 CLP (+ IVA)</p>
                         <ul class="space-y-2 list-disc pl-5">
                             <li>Diseño básico utilizando plantillas prediseñadas.</li>
                             <li>Hasta 4 secciones (inicio, servicios, contacto, etc.).</li>
@@ -186,16 +196,17 @@
                             <li>Optimización básica para dispositivos móviles.</li>
                         </ul>
                     </div>
-        
+
                     <!-- Plan Smart -->
-                    <div class="p-6 shadow-lg bg-lime-200 rounded-lg">
+                    <div class="p-6 shadow-lg bg-lime-200">
                         <div class="flex items-center space-x-2 mb-4">
-                            <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl rounded-full">
+                            <div
+                                class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
                                 2
                             </div>
                             <h3 class="text-xl font-bold">Smart</h3>
                         </div>
-                        <p class="text-lg text-black font-semibold mb-4">Desde: $350.000 CLP (+ IVA)</p>
+                        <p class="text-lg text-azul-fondo font-semibold mb-4">Desde: $350.000 CLP (+ IVA)</p>
                         <ul class="space-y-2 list-disc pl-5">
                             <li>Diseño personalizado.</li>
                             <li>Hasta 6 secciones (inicio, sobre nosotros, servicios, blog, contacto, etc.).</li>
@@ -204,20 +215,23 @@
                             <li>Optimización para dispositivos móviles y velocidad de carga.</li>
                         </ul>
                     </div>
-        
+
                     <!-- Plan Pro -->
-                    <div class="p-6 shadow-lg bg-lime-200 rounded-lg">
+                    <div class="p-6 shadow-lg bg-lime-200">
                         <div class="flex items-center space-x-2 mb-4">
-                            <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl rounded-full">
+                            <div
+                                class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
                                 3
                             </div>
                             <h3 class="text-xl font-bold">Pro</h3>
                         </div>
-                        <p class="text-lg text-black font-semibold mb-4">Desde: $500.000 CLP (+ IVA)</p>
+                        <p class="text-lg text-azul-fondo font-semibold mb-4">Desde: $500.000 CLP (+ IVA)</p>
                         <ul class="space-y-2 list-disc pl-5">
                             <li>Diseño completamente personalizado.</li>
-                            <li>Hasta 8 secciones con funciones avanzadas (testimonios, integración con redes sociales, galería de imágenes, etc.).</li>
-                            <li>Integración avanzada de SEO (optimización de contenido, estructura, velocidad de carga, etc.).</li>
+                            <li>Hasta 8 secciones con funciones avanzadas (testimonios, integración con redes sociales,
+                                galería de imágenes, etc.).</li>
+                            <li>Integración avanzada de SEO (optimización de contenido, estructura, velocidad de carga,
+                                etc.).</li>
                             <li>Integración con herramientas de marketing (Google Analytics, Mailchimp, Mailerlite).</li>
                             <li>Soporte post-lanzamiento durante un mes (ajustes y modificaciones).</li>
                             <li>Optimización completa para dispositivos móviles y velocidad de carga.</li>
@@ -226,13 +240,13 @@
                 </div>
             </div>
         </div>
-        
 
-        <!-- Título de la sección y descripción -->
-        <div class="ml-36 mr-36 mt-12">
-            <h2 class="text-2xl font-bold text-black ml-6 mt-6"><i class="fas fa-shopping-cart"></i> Tienda Online con
+        <!-- Tienda Online con Shopify o WooCommerce -->
+        <div class="mt-12 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-azul-fondo mb-4 flex items-center"><i class="fas fa-shopping-cart mr-2"></i>
+                Tienda Online con
                 Shopify o WooCommerce</h2>
-            <p class="text-lg text-black ml-6 mb-4">
+            <p class="text-lg text-azul-fondo mb-6">
                 La página con Shopify o WooCommerce es perfecta para aquellos que desean crear una tienda online profesional
                 y
                 funcional. Ya sea para productos físicos, digitales o servicios, estas plataformas ofrecen todo lo necesario
@@ -240,92 +254,105 @@
                 gestionar tu tienda de manera eficiente y rentable.
             </p>
 
-            <!-- Botón para mostrar/ocultar opciones para Página con Shopify o WooCommerce -->
-            <button
-                class="bg-black text-white font-semibold ml-6 py-2 px-4 mb-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-limon hover:bg-verde-limon hover:text-black"
-                onclick="togglePlans('shopify-woocommerce', this)">
-                Ver valores
-            </button>
-        </div>
+            <!-- Botón para mostrar/ocultar opciones -->
+            <div class="text-center lg:text-left">
+                <button
+                    class="bg-azul-fondo text-white font-semibold py-2 px-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-limon hover:bg-verde-limon hover:text-azul-fondo"
+                    onclick="togglePlans('shopify-woocommerce', this)">
+                    Ver valores
+                </button>
+            </div>
 
-        <!-- Opciones Lite, Smart y Pro (ocultas inicialmente) -->
-        <div id="shopify-woocommerce-plans" class="ml-12 mr-12 hidden">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-                <!-- Plan Lite -->
-                <div class="p-6 shadow-lg bg-lime-200">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
-                            1
+            <!-- Opciones Lite, Smart y Pro (ocultas inicialmente) -->
+            <div id="shopify-woocommerce-plans" class="hidden mt-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Plan Lite -->
+                    <div class="p-6 shadow-lg bg-lime-200">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
+                                1
+                            </div>
+                            <h3 class="text-2xl font-bold">Lite</h3>
                         </div>
-                        <h3 class="text-2xl font-bold">Lite</h3>
+                        <p class="text-lg text-azul-fondo font-semibold mb-4">Desde: $250.000 CLP (+ iva)</p>
+                        <ul class="space-y-2 list-disc pl-5">
+                            <li>Instalación y configuración básica de Shopify o WooCommerce.</li>
+                            <li>Diseño utilizando plantillas prediseñadas.</li>
+                            <li>Hasta 5 productos o categorías configuradas.</li>
+                            <li>Integración básica de pagos (PayPal, tarjetas de crédito, etc.).</li>
+                            <li>Optimización para dispositivos móviles.</li>
+                        </ul>
                     </div>
-                    <p class="text-lg text-black font-semibold mb-4">Desde: $250.000 CLP (+ iva)</p>
-                    <ul class="space-y-2 list-disc pl-5">
-                        <li>Instalación y configuración básica de Shopify o WooCommerce.</li>
-                        <li>Diseño utilizando plantillas prediseñadas.</li>
-                        <li>Hasta 5 productos o categorías configuradas.</li>
-                        <li>Integración básica de pagos (PayPal, tarjetas de crédito, etc.).</li>
-                        <li>Optimización para dispositivos móviles.</li>
-                    </ul>
-                </div>
 
-                <!-- Plan Smart -->
-                <div class="p-6 shadow-lg bg-lime-200">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
-                            2
+                    <!-- Plan Smart -->
+                    <div class="p-6 shadow-lg bg-lime-200">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
+                                2
+                            </div>
+                            <h3 class="text-2xl font-bold">Smart</h3>
                         </div>
-                        <h3 class="text-2xl font-bold">Smart</h3>
+                        <p class="text-lg text-azul-fondo font-semibold mb-4">Desde: $400.000 CLP (+ iva)</p>
+                        <ul class="space-y-2 list-disc pl-5">
+                            <li>Diseño personalizado adaptado a la identidad de la tienda.</li>
+                            <li>Hasta 10 productos o categorías configuradas.</li>
+                            <li>Integración avanzada de pagos y opciones de envío.</li>
+                            <li>Optimización básica de SEO (títulos, meta descripciones, etc.).</li>
+                            <li>Soporte para promociones y descuentos (cupón de descuento, envíos gratis, etc.).</li>
+                            <li>Optimización para dispositivos móviles y velocidad de carga.</li>
+                        </ul>
                     </div>
-                    <p class="text-lg text-black font-semibold mb-4">Desde: $400.000 CLP (+ iva)</p>
-                    <ul class="space-y-2 list-disc pl-5">
-                        <li>Diseño personalizado adaptado a la identidad de la tienda.</li>
-                        <li>Hasta 10 productos o categorías configuradas.</li>
-                        <li>Integración avanzada de pagos y opciones de envío.</li>
-                        <li>Optimización básica de SEO (títulos, meta descripciones, etc.).</li>
-                        <li>Soporte para promociones y descuentos (cupón de descuento, envíos gratis, etc.).</li>
-                        <li>Optimización para dispositivos móviles y velocidad de carga.</li>
-                    </ul>
-                </div>
 
-                <!-- Plan Pro -->
-                <div class="p-6 shadow-lg bg-lime-200">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
-                            3
+                    <!-- Plan Pro -->
+                    <div class="p-6 shadow-lg bg-lime-200">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="w-10 h-10 bg-verde-piola text-white flex items-center justify-center text-2xl">
+                                3
+                            </div>
+                            <h3 class="text-2xl font-bold">Pro</h3>
                         </div>
-                        <h3 class="text-2xl font-bold">Pro</h3>
+                        <p class="text-lg text-azul-fondo font-semibold mb-4">Desde: $600.000 CLP (+ iva)</p>
+                        <ul class="space-y-2 list-disc pl-5">
+                            <li>Diseño completamente personalizado, incluyendo elementos interactivos.</li>
+                            <li>Configuración ilimitada de productos y categorías.</li>
+                            <li>Integración avanzada de pagos (diversos métodos de pago locales e internacionales).</li>
+                            <li>Configuración de herramientas de marketing (automatización de correos, recomendaciones
+                                de
+                                productos,
+                                etc.).</li>
+                            <li>Integración avanzada de SEO (optimización de producto, estructura del sitio, velocidad).
+                            </li>
+                            <li>Soporte post-lanzamiento durante un mes (ajustes y modificaciones).</li>
+                            <li>Optimización completa para dispositivos móviles y velocidad de carga.</li>
+                        </ul>
                     </div>
-                    <p class="text-lg text-black font-semibold mb-4">Desde: $600.000 CLP (+ iva)</p>
-                    <ul class="space-y-2 list-disc pl-5">
-                        <li>Diseño completamente personalizado, incluyendo elementos interactivos.</li>
-                        <li>Configuración ilimitada de productos y categorías.</li>
-                        <li>Integración avanzada de pagos (diversos métodos de pago locales e internacionales).</li>
-                        <li>Configuración de herramientas de marketing (automatización de correos, recomendaciones de
-                            productos,
-                            etc.).</li>
-                        <li>Integración avanzada de SEO (optimización de producto, estructura del sitio, velocidad).</li>
-                        <li>Soporte post-lanzamiento durante un mes (ajustes y modificaciones).</li>
-                        <li>Optimización completa para dispositivos móviles y velocidad de carga.</li>
-                    </ul>
                 </div>
             </div>
         </div>
 
-        <div class="ml-36 mr-36 mt-12">
-            <h2 class="text-2xl font-bold text-black ml-6 mt-6"><i class="fas fa-code"></i> Páginas Web Personalizadas
+        <!-- Páginas Web Personalizadas -->
+        <div class="mt-12 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-azul-fondo mb-4 flex items-center"><i class="fas fa-code mr-2"></i>
+                Páginas Web Personalizadas
             </h2>
-            <p class="text-lg text-black ml-6 mb-4">
-                Diseñadas a la medida para empresas que buscan destacar con un sitio único, adaptado a la identidad de su
+            <p class="text-lg text-azul-fondo mb-6">
+                Diseñadas a la medida para empresas que buscan destacar con un sitio único, adaptado a la identidad de
+                su
                 marca y necesidades específicas. Ideal para integrar funcionalidades avanzadas, ofrecer una experiencia
                 exclusiva y lograr una presencia online potente y personalizada.
             </p>
 
             <!-- Botón para mostrar/ocultar opciones para Página con Shopify o WooCommerce -->
-            <a href="{{ route('contact') }}"
-                class="bg-black text-white font-semibold ml-6 py-2 px-4 mb-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-limon hover:bg-verde-limon hover:text-black">
-                Solicitar Cotización
-            </a>
+            <div class="text-center lg:text-left">
+                <a href="{{ route('contact') }}"
+                    class="bg-azul-fondo text-white font-semibold py-2 px-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-limon hover:bg-verde-limon hover:text-azul-fondo">
+                    Solicitar Cotización
+                </a>
+            </div>
+
+            <!-- Div vacío oculto para mantener consistencia -->
+            <div id="hidden-placeholder" class="hidden mt-6"></div>
+
         </div>
 
     </section>
@@ -352,15 +379,15 @@
     </div>
 
     {{-- DISEÑO WEB --}}
-    <section class="mb-12">
-        <h1 class="text-4xl font-bold text-black ml-12 mb-6">Diseño Web</h1>
+    <section id="design-web" class="mb-12">
+        <h1 class="text-4xl font-bold text-azul-fondo ml-12 mb-6">Diseño Web</h1>
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Servicio: Diseño de Logo -->
                 <div class="bg-white p-6 shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300">
                     <div class="flex items-center space-x-4 mb-4">
-                        <i class="fa fa-paint-brush text-3xl text-black"></i>
-                        <h2 class="text-2xl font-semibold text-black">Diseño de Logo</h2>
+                        <i class="fa fa-paint-brush text-3xl text-azul-fondo"></i>
+                        <h2 class="text-2xl font-semibold text-azul-fondo">Diseño de Logo</h2>
                     </div>
                     <ul class="list-disc pl-5 space-y-2">
                         <li>Creación de logotipos personalizados</li>
@@ -372,8 +399,8 @@
                 <!-- Servicio: Identidad Corporativa -->
                 <div class="bg-white p-6 shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300">
                     <div class="flex items-center space-x-4 mb-4">
-                        <i class="fa fa-cogs text-3xl text-black"></i>
-                        <h2 class="text-2xl font-semibold text-black">Identidad Corporativa Visual</h2>
+                        <i class="fa fa-cogs text-3xl text-azul-fondo"></i>
+                        <h2 class="text-2xl font-semibold text-azul-fondo">Identidad Corporativa Visual</h2>
                     </div>
                     <ul class="list-disc pl-5 space-y-2">
                         <li>Manual de Marca</li>
@@ -385,8 +412,8 @@
                 <!-- Servicio: Material Corporativo Básico -->
                 <div class="bg-white p-6 shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300">
                     <div class="flex items-center space-x-4 mb-4">
-                        <i class="fa fa-briefcase text-3xl text-black"></i>
-                        <h2 class="text-2xl font-semibold text-black">Material Corporativo Básico</h2>
+                        <i class="fa fa-briefcase text-3xl text-azul-fondo"></i>
+                        <h2 class="text-2xl font-semibold text-azul-fondo">Material Corporativo Básico</h2>
                     </div>
                     <ul class="list-disc pl-5 space-y-2">
                         <li>Diseño de papelería (tarjetas, membretes)</li>
@@ -398,8 +425,8 @@
                 <!-- Servicio: Redes Sociales y Publicidad -->
                 <div class="bg-white p-6 shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300">
                     <div class="flex items-center space-x-4 mb-4">
-                        <i class="fa fa-bullhorn text-3xl text-black"></i>
-                        <h2 class="text-2xl font-semibold text-black">Diseño para Redes Sociales y Publicidad</h2>
+                        <i class="fa fa-bullhorn text-3xl text-azul-fondo"></i>
+                        <h2 class="text-2xl font-semibold text-azul-fondo">Diseño para Redes Sociales y Publicidad</h2>
                     </div>
                     <ul class="list-disc pl-5 space-y-2">
                         <li>Kit de Redes Sociales</li>
@@ -411,8 +438,8 @@
                 <!-- Servicio: Diseño de Packaging y Etiquetas -->
                 <div class="bg-white p-6 shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300">
                     <div class="flex items-center space-x-4 mb-4">
-                        <i class="fa fa-cube text-3xl text-black"></i>
-                        <h2 class="text-2xl font-semibold text-black">Diseño de Packaging y Etiquetas</h2>
+                        <i class="fa fa-cube text-3xl text-azul-fondo"></i>
+                        <h2 class="text-2xl font-semibold text-azul-fondo">Diseño de Packaging y Etiquetas</h2>
                     </div>
                     <ul class="list-disc pl-5 space-y-2">
                         <li>Diseño de empaques</li>
@@ -424,8 +451,8 @@
                 <!-- Servicio: Consultoría de Imagen Corporativa -->
                 <div class="bg-white p-6 shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300">
                     <div class="flex items-center space-x-4 mb-4">
-                        <i class="fa fa-users text-3xl text-black"></i>
-                        <h2 class="text-2xl font-semibold text-black">Consultoría de Imagen Corporativa</h2>
+                        <i class="fa fa-users text-3xl text-azul-fondo"></i>
+                        <h2 class="text-2xl font-semibold text-azul-fondo">Consultoría de Imagen Corporativa</h2>
                     </div>
                     <ul class="list-disc pl-5 space-y-2">
                         <li>Asesoría en identidad visual</li>
@@ -440,7 +467,7 @@
         <div class="text-center mt-8">
             <a href="{{ route('contact') }}">
                 <button
-                    class="bg-black text-white font-semibold py-2 px-4 mb-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-black">
+                    class="bg-azul-fondo text-white font-semibold py-2 px-4 mb-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-azul-fondo">
                     Solicitar Cotización
                 </button>
             </a>
@@ -465,8 +492,9 @@
         </svg>
     </div>
 
-    <section class="pb-12 bg-verde-bonito">
-        <h1 class="text-4xl font-bold text-black ml-12 pt-6 pb-6">Servicios para tu Emprendimiento</h1>
+    {{--servicios para el emprendedor --}}
+    <section id="servicios-pyme" class="pb-12 bg-verde-bonito">
+        <h1 class="text-4xl font-bold text-azul-fondo ml-12 pt-6 pb-6">Servicios para tu Emprendimiento</h1>
         <div class="container mx-auto px-4 mt-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -583,16 +611,16 @@
         </div>
         <div class="text-center mt-12">
             <a href="{{ route('contact') }}"
-                class="bg-black text-white font-semibold ml-6 py-2 px-4 mb-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-limon hover:bg-verde-limon hover:text-black">
+                class="bg-azul-fondo text-white font-semibold ml-6 py-2 px-4 mb-6 transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-limon hover:bg-verde-limon hover:text-azul-fondo">
                 Solicitar Cotización
             </a>
         </div>
     </section>
 
-    <section class="bg-green-100 py-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-green-600 mb-4">Nuestro compromiso contigo</h2>
-            <p class="text-lg max-w-3xl mx-auto">Estamos comprometidos a brindarte soluciones confiables y efectivas que
+    <section class="bg-green-100">
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-10">
+            <h2 class="text-4xl font-extrabold mb-6">Nuestro compromiso contigo</h2>
+            <p class="text-lg mb-8">Estamos comprometidos a brindarte soluciones confiables y efectivas que
                 ayuden a tu negocio a prosperar. Nos apasiona trabajar contigo para encontrar las mejores estrategias que
                 impulsen el éxito de tu emprendimiento.</p>
         </div>

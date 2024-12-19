@@ -13,16 +13,17 @@
         </video>
 
         <!-- Superposición semitransparente -->
-        <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
+        <div class="absolute inset-0 bg-azul-fondo bg-opacity-30 z-10"></div>
 
         <!-- Contenido del encabezado -->
-        <div class="relative z-20 flex flex-col items-end justify-center h-full text-right text-white pr-4 md:pr-8 lg:pr-10 px-4 sm:px-6">
+        <div
+            class="relative z-20 flex flex-col items-end justify-center h-full text-right text-white pr-4 md:pr-8 lg:pr-10 px-4 sm:px-6">
             <h1 class="text-2xl sm:text-3xl lg:text-4xl italic">Potencia tu Emprendimiento</h1>
             <div class="animated-text-container">
                 <p class="animated-text text-2xl sm:text-2xl lg:text-4xl font-bold"></p>
             </div>
             <a href="{{ route('services') }}"
-                class="mt-6 bg-black text-white font-semibold py-2 px-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-black">
+                class="mt-6 bg-azul-fondo text-white font-semibold py-2 px-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-azul-fondo">
                 Descubre cómo podemos impulsar tu negocio.
             </a>
         </div>
@@ -33,21 +34,21 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
             <!-- Contenido Izquierdo -->
             <div class="text-center lg:text-left lg:w-1/2">
-                <h2 class="text-3xl font-extrabold text-black mb-6">Haz crecer tu negocio con herramientas digitales simples
+                <h2 class="text-3xl font-extrabold text-azul-fondo mb-6">Haz crecer tu negocio con herramientas digitales simples
                     y efectivas
                 </h2>
-                <p class="text-lg text-black mb-8">¿Eres <strong>emprendedor</strong> o diriges una
+                <p class="text-lg text-azul-fondo mb-8">¿Eres <strong>emprendedor</strong> o diriges una
                     <strong>pyme</strong>? No necesitas complicarte. Te
                     ayudamos a digitalizar y optimizar tu negocio con soluciones prácticas y modernas: páginas web
                     funcionales, automatización de tareas y estrategias de marketing adaptadas a tu realidad.
 
                 </p>
-                <p class="text-lg text-black mb-8">Además,
+                <p class="text-lg text-azul-fondo mb-8">Además,
                     utilizamos <strong>inteligencia artificial </strong> identificar oportunidades y diseñar soluciones
                     inteligentes que
                     impulsan tu crecimiento de manera eficiente.</p>
                 <a href="{{ route('contact') }}"
-                    class="bg-black text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-black">
+                    class="bg-azul-fondo text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-azul-fondo">
                     Descubre cómo simplificar tus procesos <br>y aumentar tu eficiencia!
                 </a>
             </div>
@@ -72,7 +73,7 @@
 
     {{-- SERVICIOS PRINCIPALES --}}
     <section class="pb-12 bg-verde-bonito">
-        <h2 class="text-3xl font-extrabold text-black text-center mb-12">Nuestros Servicios</h2>
+        <h2 class="text-3xl font-extrabold text-azul-fondo text-center mb-12">Nuestros Servicios</h2>
         <div class="container mx-auto px-4 mt-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -92,8 +93,8 @@
                                 Creación de sitios web adaptados a las necesidades de tu negocio, asegurando rendimiento y
                                 escalabilidad.
                             </p>
-                            <button onclick="window.location.href='{{ route('services') }}';"
-                                class="bg-black text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-black">
+                            <button onclick="window.location.href='{{ route('services') }}#development-web';"
+                                class="bg-azul-fondo text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-azul-fondo">
                                 Más detalles
                             </button>
                         </div>
@@ -113,8 +114,8 @@
                         <div class="flip-box-back">
                             <p>Diseños atractivos y funcionales que reflejan la identidad de tu marca y mejoran la
                                 experiencia de usuario.</p>
-                            <p><button onclick="window.location.href='{{ route('services') }}';"
-                                    class="bg-black text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-black">
+                            <p><button onclick="window.location.href='{{ route('services') }}#design-web';"
+                                    class="bg-azul-fondo text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-azul-fondo">
                                     Más detalles
                                 </button></p>
                         </div>
@@ -133,8 +134,8 @@
                         <div class="flip-box-back">
                             <p>Soporte técnico, marketing digital y mucho más para cubrir todas las necesidades tecnológicas
                                 de tu empresa.</p>
-                            <button onclick="window.location.href='{{ route('services') }}';"
-                                class="bg-black text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-black">
+                            <button onclick="window.location.href='{{ route('services') }}#servicios-pyme';"
+                                class="bg-azul-fondo text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-azul-fondo">
                                 Más Detalles
                             </button>
                         </div>
@@ -160,14 +161,13 @@
     <!-- TESTIMONIOS -->
     <section class="bg-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-black text-center mb-12">Testimonios de clientes</h2>
+            <h2 class="text-3xl font-extrabold text-azul-fondo text-center mb-12">Testimonios de clientes</h2>
 
             <!-- Contenedor de Swiper -->
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <!-- Testimonios -->
-                    <div
-                        class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
+                    <div class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
                         <p class="text-gray-600 italic mb-4">
                             "wolvex nos ayudó a crear una tienda en línea y todos los diseños de productos e imagen
                             institucional mejoramos la captación de clientes."
@@ -177,8 +177,7 @@
                             <span class="text-sm text-gray-500">Emprendedor Eléctrico</span>
                         </div>
                     </div>
-                    <div
-                        class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
+                    <div class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
                         <p class="text-gray-600 italic mb-4">
                             "La automatización de procesos ha sido un cambio total para nuestro equipo. Ahora gastamos menos
                             tiempo en tareas repetitivas."
@@ -188,8 +187,7 @@
                             <span class="text-sm text-gray-500">Gerente de Servicios</span>
                         </div>
                     </div>
-                    <div
-                        class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
+                    <div class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
                         <p class="text-gray-600 italic mb-4">
                             "Nuestro sitio web y estrategia de marketing digital diseñados por wolvex han sido claves para
                             llegar a nuevos clientes."
@@ -199,8 +197,7 @@
                             <span class="text-sm text-gray-500">Arquitecta</span>
                         </div>
                     </div>
-                    <div
-                        class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
+                    <div class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
                         <p class="text-gray-600 italic mb-4">
                             "Gracias a wolvex, logramos crear nuestra aplicación web para nuestros estudiantes de
                             ingeniería."
@@ -210,8 +207,7 @@
                             <span class="text-sm text-gray-500">Emprendedor Educativo</span>
                         </div>
                     </div>
-                    <div
-                        class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
+                    <div class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
                         <p class="text-gray-600 italic mb-4">
                             "El sitio web y los diseños para las rrss que wolvex creó para mi negocio ha sido increíble, con
                             una navegación muy sencilla para mis clientes."
@@ -221,8 +217,7 @@
                             <span class="text-sm text-gray-500">Ingeniero Constructor</span>
                         </div>
                     </div>
-                    <div
-                        class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
+                    <div class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
                         <p class="text-gray-600 italic mb-4">
                             "Las soluciones de gestión y el soporte de wolvex nos han ahorrado tiempo y han mejorado la
                             eficiencia en todos nuestros procesos."
@@ -232,8 +227,7 @@
                             <span class="text-sm text-gray-500">Ingeniero Comercial</span>
                         </div>
                     </div>
-                    <div
-                        class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
+                    <div class="swiper-slide flex flex-col items-center text-center bg-white shadow-md p-6 mx-4 h-full">
                         <p class="text-gray-600 italic mb-4">
                             "El equipo de wolvex es muy profesional. El diseño de productos e identidad corporativa que
                             crearon es impresionante."
@@ -253,19 +247,99 @@
         </div>
     </section>
 
+    {{-- EFICIENCIA PARA EMPRENDEDORES --}}
+    <section class="bg-green-100 py-16">
+        <div class="container mx-auto px-4">
+            <!-- Título Centrado -->
+            <h2 class="text-3xl font-extrabold text-azul-fondo text-center mb-12">Eficiencia para Emprendedores</h2>
+
+            <!-- Introducción -->
+            <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-12">
+                Transformar tu negocio no tiene por qué ser complicado. En Wolvex, ofrecemos herramientas simples y
+                efectivas que automatizan tareas, optimizan procesos y mejoran la imagen de tu PYME para que puedas
+                concentrarte en crecer.
+            </p>
+
+            <!-- Ejemplos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Ejemplo 1 -->
+                <div
+                    class="p-6 bg-white shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                    <i class="fa fa-comments text-4xl text-verde-bonito mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Chatbots Inteligentes</h3>
+                    <p class="text-gray-600">Automatiza respuestas a consultas frecuentes de clientes y mejora su
+                        experiencia con atención 24/7.</p>
+                </div>
+
+                <!-- Ejemplo 2 -->
+                <div
+                    class="p-6 bg-white shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                    <i class="fa fa-paint-brush text-4xl text-verde-bonito mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Diseño de Logos y Marca</h3>
+                    <p class="text-gray-600">Mejora tu imagen profesional con un logo atractivo y una identidad visual
+                        sólida que conecte con tus clientes.</p>
+                </div>
+
+                <!-- Ejemplo 3 -->
+                <div
+                    class="p-6 bg-white shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                    <i class="fa fa-file-alt text-4xl text-verde-bonito mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Automatización de Documentos</h3>
+                    <p class="text-gray-600">Genera y organiza documentos como PDF, imágenes o Excel de forma automática
+                        para ahorrar tiempo.</p>
+                </div>
+
+                <!-- Ejemplo 4 -->
+                <div
+                    class="p-6 bg-white shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                    <i class="fa fa-database text-4xl text-verde-bonito mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Integración de Bases de Datos</h3>
+                    <p class="text-gray-600">Conecta los emails de tu página web con herramientas como Mailerlite para
+                        automatizar campañas de marketing.</p>
+                </div>
+
+                <!-- Ejemplo 5 -->
+                <div
+                    class="p-6 bg-white shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                    <i class="fa fa-bell text-4xl text-verde-bonito mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Automatización Web</h3>
+                    <p class="text-gray-600">Envía correos de bienvenida, recordatorios de compra y mensajes personalizados
+                        a tus usuarios automáticamente.</p>
+                </div>
+
+                <!-- Ejemplo 6 -->
+                <div
+                    class="p-6 bg-white shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                    <i class="fa fa-chart-line text-4xl text-verde-bonito mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Sistemas ERP y Ventas Cruzadas</h3>
+                    <p class="text-gray-600">Implementa sistemas de gestión empresarial que optimicen inventarios, ventas y
+                        administración.</p>
+                </div>
+            </div>
+
+            <!-- Botón Centrado -->
+            <div class="text-center mt-12">
+                <button onclick="window.location.href='{{ route('services') }}';"
+                    class="bg-azul-fondo text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-azul-fondo">
+                    Descubre Soluciones para tu PYME
+                </button>
+            </div>
+        </div>
+    </section>
+
     {{-- PROYECTOS --}}
     <section class="mb-10 py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-extrabold text-black mb-12">Últimos Proyectos</h2>
+            <h2 class="text-3xl font-extrabold text-azul-fondo mb-12">Últimos Proyectos</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <!-- Tarjeta 1 -->
                 <div class="relative group bg-white shadow-md overflow-hidden">
                     <a href="https://hidroshock.cl/" target="_blank" rel="noopener noreferrer">
                         <img src="{{ asset('storage/assets/clientes/1.png') }}" alt="Proyecto 1"
-                            class="w-full h-28 object-contain">
+                        class="w-full h-28 object-contain scale-[0.6] mx-auto">
                         <div
-                            class="absolute inset-0 bg-black bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            class="absolute inset-0 bg-azul-fondo bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <h3 class="text-lg font-semibold">Servicios Desplegados</h3>
                             <p class="text-sm mt-2">Identidad visual, diseño de logos y productos, diseño de
                                 ecommerce,
@@ -278,9 +352,9 @@
                 <div class="relative group bg-white shadow-md overflow-hidden">
                     <a href="https://constructoravoso.cl/" target="_blank" rel="noopener noreferrer">
                         <img src="{{ asset('storage/assets/clientes/2.png') }}" alt="Proyecto 2"
-                            class="w-full h-28 object-contain">
+                            class="w-full h-28 object-contain scale-[0.6] mx-auto">
                         <div
-                            class="absolute inset-0 bg-black bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            class="absolute inset-0 bg-azul-fondo bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <h3 class="text-lg font-semibold">Servicios Desplegados</h3>
                             <p class="text-sm mt-2">Diseño de website, marketing digital y automatizaciones</p>
                         </div>
@@ -291,9 +365,9 @@
                 <div class="relative group bg-white shadow-md overflow-hidden">
                     <a href="https://rcrchile.cl/" target="_blank" rel="noopener noreferrer">
                         <img src="{{ asset('storage/assets/clientes/3.png') }}" alt="Proyecto 3"
-                            class="w-full h-28 object-contain">
+                            class="w-full h-28 object-contain scale-[0.6] mx-auto">
                         <div
-                            class="absolute inset-0 bg-black bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            class="absolute inset-0 bg-azul-fondo bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <h3 class="text-lg font-semibold">Servicios Desplegados</h3>
                             <p class="text-sm mt-2">Diseño de logo, identidad visual y publicidad, diseño de
                                 website
@@ -307,7 +381,7 @@
 
     <!-- TECNOLOGÍAS -->
     <section class="carrusel-container mb-10">
-        <h2 class="text-center text-3xl font-extrabold text-black mb-4">Tecnologías</h2>
+        <h2 class="text-center text-3xl font-extrabold text-azul-fondo mb-4">Tecnologías</h2>
         <div class="carrusel">
             @for ($i = 1; $i <= 16; $i++)
                 <div class="carrusel-item">
@@ -335,7 +409,7 @@
                 <source src="{{ asset('storage/assets/videos/' . $random_video) }}" type="video/webm">
             </video>
             <!-- Capa de superposición con opacidad -->
-            <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+            <div class="absolute inset-0 bg-azul-fondo bg-opacity-60 z-10"></div>
         </div>
 
         <!-- Contenido -->
@@ -347,7 +421,7 @@
                 estrategias digitales personalizadas para atraer más clientes.
             </p>
             <a href="{{ route('contact') }}"
-                class="bg-black text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-black">
+                class="bg-azul-fondo text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-azul-fondo">
                 ¡Habla con un experto y comienza hoy!
             </a>
         </div>

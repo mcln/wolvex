@@ -1,3 +1,7 @@
+{{-- - Color primario: #01FF66 **Pantone 802 C** (verde brillante y vibrante).
+- Color secundario: #affc41 **Pantone 381 C** (un verde-lima brillante).
+- Color de acento: #affc41 **Pantone 381 C** (un verde-lima brillante). --}}
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -35,7 +39,19 @@
 </head>
 
 <body>
-    <nav class="bg-black w-full z-30 fixed top-0 left-0 transition-all duration-300" id="navbar">
+    {{-- loader --}}
+    <div id="loader" class="fixed inset-0 bg-azul-fondo z-50 flex items-center justify-center hidden">
+        <!-- Contenedor del círculo y logo -->
+        <div class="relative">
+            <!-- Círculo animado -->
+            <div class="w-40 h-40 border-2 border-t-verde-bonito border-white rounded-full animate-spin"></div>
+            <!-- Logo en el centro -->
+            <img src="{{ asset('storage/assets/logo_wolvex_home.png') }}" alt="Wolvex Logo"
+                class="absolute inset-0 m-auto w-[70%] h-auto">
+        </div>
+    </div>
+
+    <nav class="bg-azul-fondo w-full z-30 fixed top-0 left-0 transition-all duration-300" id="navbar">
         <div class="mx-auto px-2 sm:px-6 h-12 flex items-center justify-between">
             <!-- Logo -->
             <a href="{{ route('home') }}" class="flex items-center">
@@ -102,24 +118,91 @@
         </div>
     </nav>
 
-    <div class="font-sans text-gray-900 dark:text-gray-100 antialiased">
+    <div class="font-sans text-azul-fondo dark:text-gray-100 antialiased">
         @yield('content')
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chatbot-container" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000;">
+        <!-- Botón para abrir/cerrar el chat -->
+        <button id="toggle-chat"
+            style="background-color: #01FF66; color: white; padding: 15px; border: none; border-radius: 50%; cursor: pointer;">
+            💬
+        </button>
+
+        <!-- Ventana del chat -->
+        <div id="chat-window"
+            style="display: none; position: fixed; bottom: 70px; left: 20px; background: white; border: 1px solid #ccc; width: 300px; height: 400px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 10px; flex-direction: column;">
+            <!-- Mensajes -->
+            <div id="chat-messages"
+                style="overflow-y: auto; flex: 1; margin-bottom: 10px; padding: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                <!-- Aquí aparecerán los mensajes -->
+            </div>
+
+            <!-- Campo de mensaje -->
+            <div style="display: flex; gap: 5px; margin-bottom: 10px;">
+                <input type="text" id="user-message" placeholder="Escribe tu mensaje..."
+                    style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+                <button id="send-message"
+                    style="background-color: #007BFF; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer;">Enviar</button>
+            </div>
+
+            <!-- Botón de WhatsApp -->
+            <button id="redirect-whatsapp"
+                style="background: #25D366; color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer;">
+                Hablar por WhatsApp
+            </button>
+        </div>
     </div>
 
     @livewireScripts
 
     {{-- Alpije.JS --}}
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+   {{--  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script> --}}
 
-    <!-- JavaScript for Mobile Menu Toggle -->
-    {{--    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <!-- CHATBOT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const chatWindow = document.getElementById("chat-window");
+            const toggleChatButton = document.getElementById("toggle-chat");
+            const sendMessageButton = document.getElementById("send-message");
+            const redirectToWhatsAppButton = document.getElementById("redirect-whatsapp");
+            const chatMessages = document.getElementById("chat-messages");
+            const userMessageInput = document.getElementById("user-message");
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            // Alternar visibilidad del chat
+            toggleChatButton.addEventListener("click", function() {
+                chatWindow.classList.toggle("active");
+                console.log("Clases actuales:", chatWindow.className);
+                console.log("El botón ha sido clickeado");
+            });
+
+            // Simular envío de mensajes
+            sendMessageButton.addEventListener("click", function() {
+                const userMessage = userMessageInput.value.trim();
+                if (userMessage) {
+                    // Mostrar el mensaje del usuario
+                    const userMessageDiv = document.createElement("div");
+                    userMessageDiv.innerHTML = `<strong>Tú:</strong> ${userMessage}`;
+                    chatMessages.appendChild(userMessageDiv);
+
+                    // Simular una respuesta del bot
+                    const botMessageDiv = document.createElement("div");
+                    botMessageDiv.innerHTML = `<strong>Bot:</strong> Estoy procesando tu mensaje...`;
+                    chatMessages.appendChild(botMessageDiv);
+
+                    // Limpiar el input
+                    userMessageInput.value = "";
+                }
+            });
+
+            // Redirigir a WhatsApp
+            redirectToWhatsAppButton.addEventListener("click", function() {
+                window.open("https://wa.me/56996744719?text=Hola,%20quiero%20hablar%20con%20un%20asesor.",
+                    "_blank");
+            });
         });
-    </script> --}}
+    </script>
 
     <!-- JavaScript para el oscurecimiento del menu -->
     <script>
@@ -360,10 +443,97 @@
         });
     </script>
 
+    <!-- LOADER -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loader = document.getElementById("loader");
+
+            // Mostrar el loader
+            function showLoader() {
+                loader.classList.remove("hidden");
+                loader.classList.add("flex");
+            }
+
+            // Ocultar el loader con un retraso
+            function hideLoader() {
+                setTimeout(() => {
+                    loader.classList.remove("flex");
+                    loader.classList.add("hidden");
+                }, 3000); // Mantén el loader visible por 3 segundos
+            }
+
+            // Mostrar el loader al hacer clic en enlaces
+            const links = document.querySelectorAll("a");
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    const href = link.getAttribute("href");
+                    if (href && !href.startsWith("#") && !link.hasAttribute("target")) {
+                        showLoader();
+                    }
+                });
+            });
+
+            // Ocultar el loader después de cargar la página
+            window.addEventListener("load", hideLoader);
+        });
+    </script>
+
     <!-- Footer -->
-    <footer class="bg-black text-white py-2">
-        <p class="mt-4 text-center text-sm italic">© 2024 wolvex.cl - Todos los derechos reservados.</p>
+    <footer class="bg-azul-fondo text-white py-6">
+        <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Logo y descripción breve -->
+            <div>
+                <img src="{{ asset('storage/assets/logo_wolvex_home.png') }}" alt="Logo de Wolvex" class="w-24 mb-4">
+                <p class="text-sm text-gray-400">
+                    Soluciones tecnológicas simples y efectivas para emprendedores y PYMEs. <br>Simplifica tu negocio y
+                    alcanza tus metas.
+                </p>
+            </div>
+
+            <!-- Enlaces rápidos -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Enlaces Rápidos</h3>
+                <ul class="text-sm space-y-2">
+                    <li><a href="{{ route('home') }}" class="hover:text-verde-bonito">Inicio</a></li>
+                    <li><a href="{{ route('services') }}" class="hover:text-verde-bonito">Servicios</a></li>
+                    <li><a href="{{ route('about') }}" class="hover:text-verde-bonito">Nosotros</a></li>
+                    <li><a href="{{ route('contact') }}" class="hover:text-verde-bonito">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                <ul class="text-sm space-y-2">
+                    <li><i class="fas fa-phone-alt mr-2"></i>+56 9 9674 4719</li>
+                    <li><i class="fas fa-envelope mr-2"></i>contacto@wolvex.cl</li>
+                    <li><i class="fas fa-map-marker-alt mr-2"></i>Valparaíso, Chile</li>
+                </ul>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Síguenos</h3>
+                <div class="flex space-x-4">
+                    <a href="https://facebook.com/wolvex.cl" target="_blank" class="hover:text-verde-bonito">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://instagram.com/wolvex.cl" target="_blank" class="hover:text-verde-bonito">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/wolvex" target="_blank" class="hover:text-verde-bonito">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Separador -->
+        <div class="border-t border-gray-800 mt-6 pt-4">
+            <p class="text-center text-sm text-gray-400">© 2025 wolvex.cl - Todos los derechos reservados.</p>
+        </div>
     </footer>
+
 
 </body>
 

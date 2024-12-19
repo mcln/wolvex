@@ -12,6 +12,7 @@
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\ChatbotController;
 
 Route::get('/', [SiteController::class, 'home'])->name('home');
 Route::get('/servicios', [SiteController::class, 'services'])->name('services');
@@ -24,3 +25,5 @@ Route::get('/nosotros', [SiteController::class, 'about'])->name('about');
 Route::get('/blog', [SiteController::class, 'blog'])->name('blog');
 Route::get('/faq', [SiteController::class, 'faq'])->name('faq');
 Route::get('/clientes', [SiteController::class, 'client'])->name('client');
+
+Route::post('/chatbot', [ChatbotController::class, 'handle']);

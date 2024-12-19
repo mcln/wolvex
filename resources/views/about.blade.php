@@ -10,7 +10,7 @@
             <source src="{{ asset('storage/assets/videos/' . $random_video) }}" type="video/webm">
         </video>
         <div
-            class="relative z-10 flex flex-col items-end justify-center h-[200px] text-right text-white bg-black bg-opacity-30 pr-10">
+            class="relative z-10 flex flex-col items-end justify-center h-[200px] text-right text-white bg-azul-fondo bg-opacity-30 pr-10">
             <h1 class="text-4xl font-bold underline">Nosotros</h1>
         </div>
     </header>
@@ -18,17 +18,19 @@
     <!-- Sobre Wolvex -->
     <section class="bg-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-black text-center mb-8">¿Quiénes somos?</h2>
+            <h2 class="text-3xl font-extrabold text-azul-fondo text-center mb-8">¿Quiénes somos?</h2>
             <p class="text-lg text-gray-600 text-center mb-6">
-                En <strong>Wolvex</strong>, ayudamos a emprendedores y PYMEs a crecer en el mundo digital. Contamos con más
-                de 10 años de experiencia en tecnología y diseño., creamos soluciones accesibles y personalizadas: desde
-                páginas web y contenido para
-                redes sociales, hasta automatizaciones con inteligencia artificial.
+                En <strong>Wolvex</strong>, impulsamos a emprendedores y PYMEs a alcanzar el éxito en el mundo digital. Con
+                más de 10 años de experiencia en tecnología y diseño, ofrecemos soluciones personalizadas y accesibles que
+                transforman negocios: desde páginas web profesionales y estrategias para redes sociales, hasta
+                automatizaciones avanzadas con inteligencia artificial.
             </p>
             <p class="text-lg text-gray-600 text-center">
-                Nuestro objetivo es simplificar procesos y potenciar negocios, brindando herramientas que hacen la
-                diferencia. Creemos en tus sueños, y estamos aquí para ayudarte a alcanzarlos.
+                Nuestro compromiso es simplificar procesos y maximizar resultados, proporcionando herramientas que realmente
+                marcan la diferencia. En <strong>Wolvex</strong>, creemos en tu visión y trabajamos contigo para hacerla
+                realidad.
             </p>
+
         </div>
     </section>
 
@@ -36,7 +38,7 @@
     <!-- Valores -->
     <section class="py-16 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-black text-center mb-12">Nuestros Valores</h2>
+            <h2 class="text-3xl font-extrabold text-azul-fondo text-center mb-12">Nuestros Valores</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 <div class="p-6 bg-white shadow-lg rounded-lg">
@@ -86,7 +88,7 @@
 
     <!-- TECNOLOGÍAS -->
     <section class="carrusel-container mb-10">
-        <h2 class="text-center text-3xl font-extrabold text-black mb-4">Tecnologías</h2>
+        <h2 class="text-center text-3xl font-extrabold text-azul-fondo mb-4">Tecnologías</h2>
         <div class="carrusel">
             @for ($i = 1; $i <= 16; $i++)
                 <div class="carrusel-item">
@@ -114,7 +116,7 @@
                 <source src="{{ asset('storage/assets/videos/' . $random_video) }}" type="video/webm">
             </video>
             <!-- Capa de superposición con opacidad -->
-            <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+            <div class="absolute inset-0 bg-azul-fondo bg-opacity-60 z-10"></div>
         </div>
 
         <!-- Contenido de texto -->
@@ -126,7 +128,7 @@
                 digital!
             </p>
             <a href="{{ route('contact') }}"
-                class="bg-black text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-black">
+                class="bg-azul-fondo text-white font-semibold py-2 px-4 mb-6 inline-block transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-verde-bonito hover:bg-verde-bonito hover:text-azul-fondo">
                 Contáctanos ahora
             </a>
         </div>

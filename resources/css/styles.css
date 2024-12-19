@@ -133,7 +133,7 @@
 /* Hover: Cambiar el fondo y el color del texto */
 #navbar .md\\:flex li a:hover {
     background-color: #d4d700; /* Fondo verde-limón */
-    color: black; /* Texto negro */
+    color: #001a32; /* Texto negro */
 }
 
 /* Último elemento del menú sin margen a la derecha */
@@ -178,7 +178,7 @@
 }
 
 #mobile-menu {
-    background-color: black !important;
+    background-color: #001a32 !important;
     color: white; /* Asegura que el texto sea visible */
     padding: 16px; /* Espaciado interno */
 }
@@ -209,7 +209,7 @@
 /* Hover: Fondo verde-bonito y texto negro */
 .menu-button:hover {
     background-color: #01FF66; /* Fondo verde-bonito */
-    color: black; /* Texto negro */
+    color: #001a32
 }
 
 /* Adaptación para pantallas grandes */
@@ -242,12 +242,12 @@ ul.md\\:flex {
 /* Hover: Fondo verde-bonito y texto negro */
 .mobile-menu-button:hover {
     background-color: #01FF66; /* Fondo verde-bonito */
-    color: black; /* Texto negro */
+    color: #001a32
 }
 
 /* Cambia el color del ícono en hover */
 .mobile-menu-button:hover i {
-    color: black; /* Íconos se vuelven negros con el texto */
+    color: #001a32
 }
 
 .carrusel-container {
@@ -281,5 +281,44 @@ ul.md\\:flex {
     }
 }
 
+/* Animación de subida y bajada */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(0deg); /* Subir 20px */
+    }
+}
+
+/* Fondo negro para el loader */
+#loader {
+    background-color: #001a32; 
+/*     left: 25%; 
+    top: 50%;  */
+    z-index: 9999;
+    position: fixed; 
+}
+
+/* Animación de giro más lenta */
+@keyframes spin-slow {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin-slow 3s linear infinite;
+}
+
+/* Estilos base para el chat */
+#chat-window {
+    display: none; /* Inicialmente oculto */
+}
+
+#chat-window.active {
+    display: flex; /* Mostrar el chat cuando está activo */
+    flex-direction: column; /* Asegura que los elementos se alineen correctamente */
+}
 
 

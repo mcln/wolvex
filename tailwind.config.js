@@ -20,7 +20,9 @@ export default {
                 secondary: ['League Spartan', 'sans-serif'],
             },
             colors: {
-                'verde-bonito': '#01FF66',      // Nombre original
+                'verde-bonito': '#01FF66',          
+                'azul-fondo': '#001a32',
+                'azul-clarillo': '#014bcb',         // Nombre original
                 'verde-pastel': '#aaf683',      // Nombre original
                 'verde-limon': '#affc41',       // Nombre original
                 'verde-piola': '#38b000',       // Nombre original
